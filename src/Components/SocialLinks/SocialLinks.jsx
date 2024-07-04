@@ -1,6 +1,6 @@
 
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+
 
 
 const SocialLinks = () => {

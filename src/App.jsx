@@ -34,11 +34,15 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Footer from "./Components/Footer/Footer";
 import SocialLinks from "./Components/SocialLinks/SocialLinks";
+import { ToastContainer } from "react-toastify";
+import Education from "./Components/Education/Education";
+import Projects from "./Components/Projects/Projects";
 
 function App() {
     return (
         <div className="bg-black">
             <Navbar />
+            <ToastContainer></ToastContainer>
             <div className="w-11/12 mx-auto">
                 <section id="home">
                     <Home></Home>
@@ -50,10 +54,10 @@ function App() {
                     <Experience />
                 </section>
                 <section id="project">
-                    {/* Project Component */}
+                    <Projects></Projects>
                 </section>
                 <section id="education">
-                    {/* Education Component */}
+                    <Education></Education>
                 </section>
                 <section id="contact">
                     <Contact />
