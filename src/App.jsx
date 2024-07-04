@@ -32,6 +32,7 @@ import Contact from "./Components/Contact/Contact";
 import Experience from "./Components/Experience/Experience";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
     return (
@@ -55,6 +56,9 @@ function App() {
                 </section>
                 <section id="contact">
                     <Contact />
+                </section>
+                <section>
+                    <Footer></Footer>
                 </section>
             </div>
         </div>
