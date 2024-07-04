@@ -1,5 +1,7 @@
 
 
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
 	return (
 		<div>
@@ -20,7 +22,7 @@ const Footer = () => {
     <p>Copyright © ${new Date().getFullYear()} - All right reserved</p>
   </aside>
   <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <a>
+    {/* <a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -52,7 +54,13 @@ const Footer = () => {
         <path
           d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
       </svg>
-    </a>
+    </a> */}
+	<a href="https://github.com/RobiulIslam08" target="_blank"><FaGithub className="text-3xl cursor-pointer text-indigo-400 hover:text-indigo-500 duration-200 hover:scale-105"></FaGithub>
+	</a>
+	<a href="https://www.linkedin.com/in/rabiul-islam-00874f/" target="_blank"><FaLinkedin className="text-3xl text-indigo-400 cursor-pointer hover:text-indigo-500 duration-200 hover:scale-105"></FaLinkedin></a>
+	<a href="https://www.facebook.com/md.Robi08" target="_blank">
+	<FaFacebook className="text-3xl text-indigo-400 cursor-pointer hover:text-indigo-500 duration-200 hover:scale-105"></FaFacebook>
+	</a>
   </nav>
 </footer>
 		</div>

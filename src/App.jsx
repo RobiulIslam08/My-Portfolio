@@ -33,6 +33,7 @@ import Experience from "./Components/Experience/Experience";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Footer from "./Components/Footer/Footer";
+import SocialLinks from "./Components/SocialLinks/SocialLinks";
 
 function App() {
     return (
@@ -59,6 +60,9 @@ function App() {
                 </section>
                 <section>
                     <Footer></Footer>
+                </section>
+                <section>
+                    <SocialLinks></SocialLinks>
                 </section>
             </div>
         </div>
