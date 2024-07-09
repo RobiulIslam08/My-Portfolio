@@ -1,106 +1,37 @@
-// // import React from 'react'
+/* eslint-disable react/no-unescaped-entities */
 
-// // import javascript from "../../assets/javascript.png";
-// // import reactImage from "../../assets/react.png";
-// // import node from "../../assets/node.png";
-// // import ProjectsCard from './ProjectsCard';
-// // import { BsGithub } from 'react-icons/bs';
-// // import { FaGlobe } from 'react-icons/fa';
+import {motion} from "framer-motion"
 
-// // const Projects = () => {
-// //   return (
-// //     <section
-// //       id="projects"
-// //       className="w-full pl-4 py-20 border-b-[1px] border-b-black"
-// //     >
-// //       <div>
-// //         <p className="text-4xl  font-bold border-b-4 border-gray-500 p-2 inline">
-// //           Projects
-// //         </p>
-// //         <p className="py-6 text-gray-400">These are the technologies I've worked with</p>
-// //       </div>
-// //       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-
-// //         <div className="w-full bg-[#35463552] p-4 xl:px-12 h-auto  xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
-// //           <div className="w-full h-[80%] overflow-hidden rounded-lg">
-// //             <img
-// //               className="w-full h-60 object-cover group-hover:scale-110 duration-300 cursor-pointer"
-// //               src={node}
-// //               alt="src"
-// //             />
-// //           </div>
-// //           <div className="w-full mt-5 flex flex-col  gap-6">
-// //             <div>
-
-// //              <div className='flex justify-between'>
-// //              <h3 className="text-base uppercase font-normal">
-// //                 Toursid Guide Website
-// //               </h3>
-// //               <button className="btn btn-xs">
-
-
-// //                 Live Link
-// //               </button>
-// //              </div>
-// //               {/* <div className="flex gap-2">
-// //               <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-// //                 <BsGithub />
-// //               </span>
-// //               <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-// //                 <FaGlobe />
-// //               </span>
-// //             </div> */}
-
-// //               <p className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
-// //                 Your go-to online resource for exploring Bangladesh, offering tailored features for tourists, guides, and admins.
-// //               </p>
-// //               <div className='flex justify-between mt-1'>
-// //                 <button className="btn btn-xs">
-
-// //                   <BsGithub></BsGithub>
-// //                   Client-Github
-// //                 </button>
-// //                 <button className="btn btn-xs">
-
-// //                   <BsGithub></BsGithub>
-// //                   Client-Github
-// //                 </button>
-
-// //               </div>
-// //             </div>
-// //           </div>
-// //         </div>
-// //       </div>
-// //     </section>
-// //   );
-// // }
-
-// // export default Projects
-
-
-
-import React from 'react';
-import javascript from "../../assets/javascript.png";
 import tourista from "../../assets/projectsImage/screencapture-tourista-81113-web-app-2024-07-04-18_05_29.png"
+import tourisManagement from "../../assets/projectsImage/screencapture-localhost-5173-2024-07-07-12_54_17 (1).png"
 import electron from "../../assets/projectsImage/screencapture-electronic-repair-house-web-app-allservices-2024-07-04-19_39_01.png"
-import reactImage from "../../assets/react.png";
-import node from "../../assets/node.png";
+
 import { BsGithub } from 'react-icons/bs';
 
 const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full pl-4 py-20 border-b-[1px] border-b-black"
+      className="w-full overflow-x-hidden pl-4 py-20 border-b-[1px] border-b-black"
     >
-      <div>
+      <motion.div
+      initial={{ y: -150, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+
+      transition={{ delay: 0.2, x: { type: "spring", }, opacity: { duration: 1 }, ease: "easeIn", duration: 0.4 }}
+      >
         <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
           Projects
         </p>
         <p className="py-6 text-gray-400">These are the technologies I've worked with</p>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
-        <div className="w-full bg-[#3546352a] p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000 relative overflow-hidden">
+        <motion.div
+        initial={{x:-100, opacity:0}}
+				whileInView={{x:0, opacity:1}}
+				
+				transition={{delay:0.2, x:{type:"spring", stiffness:50}, opacity:{duration:1},ease:"easeIn", duration:1}}
+         className="w-full bg-[#3546352a] p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000 relative overflow-hidden">
           <div className="w-full h-60 overflow-hidden rounded-lg">
             <img
               className="w-full h-full overflow-y-auto  group-hover:scale-110 duration-300 cursor-pointer"
@@ -152,7 +83,7 @@ const Projects = () => {
 
 
           </div>
-        </div>
+        </motion.div>
         <div className="w-full bg-[#3546352a] p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000 relative overflow-hidden">
           <div className="w-full h-60 overflow-hidden rounded-lg">
             <img
@@ -206,11 +137,16 @@ const Projects = () => {
 
           </div>
         </div>
-        <div className="w-full bg-[#3546352a] p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000 relative overflow-hidden">
+        <motion.div
+        initial={{x:100, opacity:0}}
+				whileInView={{x:0, opacity:1}}
+				
+				transition={{delay:0.2, x:{type:"spring", stiffness:50}, opacity:{duration:1},ease:"easeIn", duration:1}}
+         className="w-full bg-[#3546352a] p-4 xl:px-12 h-auto xl:py-10 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000 relative overflow-hidden">
           <div className="w-full h-60 overflow-hidden rounded-lg">
             <img
               className="w-full h-full overflow-y-auto  group-hover:scale-110 duration-300 cursor-pointer"
-              src={tourista}
+              src={tourisManagement}
               alt="src"
             />
           </div>
@@ -258,7 +194,7 @@ const Projects = () => {
 
 
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

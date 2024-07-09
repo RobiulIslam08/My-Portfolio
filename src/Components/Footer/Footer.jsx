@@ -1,7 +1,7 @@
 
 
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { motion  } from "framer-motion";
 const Footer = () => {
 	return (
 		<div>
@@ -23,12 +23,27 @@ const Footer = () => {
   </aside>
   <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
    
-	<a href="https://github.com/RobiulIslam08" target="_blank"><FaGithub className="text-3xl cursor-pointer text-indigo-400 hover:text-indigo-500 duration-200 hover:scale-105"></FaGithub>
-	</a>
-	<a href="https://www.linkedin.com/in/rabiul-islam-00874f/" target="_blank"><FaLinkedin className="text-3xl text-indigo-400 cursor-pointer hover:text-indigo-500 duration-200 hover:scale-105"></FaLinkedin></a>
-	<a href="https://www.facebook.com/md.Robi08" target="_blank">
+	<motion.a
+    initial={{ y: -150, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+
+    transition={{ delay: 0.2, x: { type: "spring", }, opacity: { duration: 1 }, ease: "easeIn", duration: 0.4 }}
+   href="https://github.com/RobiulIslam08" target="_blank"><FaGithub className="text-3xl cursor-pointer text-indigo-400 hover:text-indigo-500 duration-200 hover:scale-105"></FaGithub>
+	</motion.a>
+	<motion.a
+    initial={{ y: -150, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+
+      transition={{ delay: 0.2, x: { type: "spring", }, opacity: { duration: 1 }, ease: "easeIn", duration: 0.8 }}
+   href="https://www.linkedin.com/in/rabiul-islam-00874f/" target="_blank"><FaLinkedin className="text-3xl text-indigo-400 cursor-pointer hover:text-indigo-500 duration-200 hover:scale-105"></FaLinkedin></motion.a>
+	<motion.a
+    initial={{ y: -150, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+
+      transition={{ delay: 0.2, x: { type: "spring", }, opacity: { duration: 1 }, ease: "easeIn", duration: 1}}
+   href="https://www.facebook.com/md.Robi08" target="_blank">
 	<FaFacebook className="text-3xl text-indigo-400 cursor-pointer hover:text-indigo-500 duration-200 hover:scale-105"></FaFacebook>
-	</a>
+	</motion.a>
   </nav>
 </footer>
 		</div>
