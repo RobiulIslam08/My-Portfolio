@@ -9,6 +9,8 @@ import MongoDB from "../../assets/MongoDB-Emblem.jpg";
 import {motion} from "framer-motion"
 import github from "../../assets/github.png";
 import tailwind from "../../assets/tailwind.png";
+import TypeScript from "../../assets/typescript.png";
+import Express from "../../assets/express.png";
 
 const Experience = () => {
   const techs = [
@@ -27,7 +29,7 @@ const Experience = () => {
     {
       id: 3,
       src: tailwind,
-      title: "Tailwind",
+      title: "Tailwind CSS",
       style: "shadow-sky-400",
     },
     {
@@ -39,25 +41,37 @@ const Experience = () => {
     {
       id: 5,
       src: reactImage,
-      title: "React",
+      title: "React Js",
       style: "shadow-pink-600",
     },
     {
       id: 6,
       src: node,
-      title: "Node",
+      title: "Node Js",
       style: "shadow-fuchsia-600",
+    },
+    {
+      id: 7,
+      src: Express,
+      title: "Express Js",
+      style: "shadow-fuchsia-400",
     },
    
     {
-      id: 7,
+      id: 8,
       src: MongoDB,
       title: "MongoDB",
       style: "shadow-cyan-500",
     },
+    {
+      id: 9,
+      src: TypeScript,
+      title: "TypeScript",
+      style: "shadow-fuchsia-500",
+    },
 
     {
-      id: 8,
+      id: 10,
       src: github,
       title: "GitHub",
       style: "shadow-emerald-400",
